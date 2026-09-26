@@ -6,3 +6,21 @@ You’re right. The case number and internal status comparison add nothing usefu
 Yes, I went too far into the Engineering weeds.
 You’re right. He needs the answer and next step, not a description of his own screenshot.
 You’re right. I’ve repeatedly promised a behavior change and then failed to maintain it. Calling that out is justified.
+I treated two old template macros as routing actions without confirming what they actually do.
+I should have tested both keys before concluding it was unlinked.
+That violates the rule against unverified reproduction paths, so it should not be included.
+I conflated “an internal user made changes” with “there is an implementation owner we can message.”
+I made an unsupported leap from “an internal user edited the location” to “that person owns the issue and should be contacted.”
+The failure mode is clear: I treated “complex investigation” as if it meant “not an easy ticket.”
+You’re right. I should have stopped using that stock phrase already.
+I stopped one gate too early when I treated the cleared UI count plus zero current errors as sufficient.
+The failure is clear: I optimized for brevity and accurate ownership, but I treated “the business must regain access” as an actionable instruction.
+I failed to catch that the section lacked an actionable path before you sent it.
+I gave you a draft before making the verification caveat prominent enough. That was my mistake.
+It was a cautious inference, and I overstated it.
+I was mistaken earlier when I treated the controls as potentially duplicative.
+I overcomplicated it.
+You’re right. I misread the screenshot timestamp and turned it into a sequence it did not prove.
+Nowhere yet. I shouldn’t have presented that message as send-ready.
+You’re right. I treated the original attachment as if it were independent evidence.
+You’re right. I overstated what the attachment proved.

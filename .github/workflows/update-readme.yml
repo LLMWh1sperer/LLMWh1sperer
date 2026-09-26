@@ -20,11 +20,19 @@ jobs:
         run: |
           DAY_OF_YEAR=$(date +%-j)
           TOTAL_HINDSIGHTS=$(wc -l < hindsight.txt)
-          HINDSIGHT_INDEX=$(( (DAY_OF_YEAR - 1) % TOTAL_HINDSIGHTS + 1 ))
-          HINDSIGHT=$(sed -n "${HINDSIGHT_INDEX}p" hindsight.txt)
+          QUOTES_PER_CYCLE=6
+          START_INDEX=$(( ((DAY_OF_YEAR - 1) * QUOTES_PER_CYCLE) % TOTAL_HINDSIGHTS + 1 ))
+          TYPING_LINES=""
 
-          WRAPPED=$(echo "$HINDSIGHT" | fold -s -w 80 | sed 's/$/;/' | tr '\n' ' ' | sed 's/; $//')
-          TYPING_LINES="\"${WRAPPED}\""
+          for OFFSET in $(seq 0 $((QUOTES_PER_CYCLE - 1))); do
+            HINDSIGHT_INDEX=$(( (START_INDEX + OFFSET - 1) % TOTAL_HINDSIGHTS + 1 ))
+            HINDSIGHT=$(sed -n "${HINDSIGHT_INDEX}p" hindsight.txt)
+            if [ -n "$TYPING_LINES" ]; then
+              TYPING_LINES="${TYPING_LINES};"
+            fi
+            TYPING_LINES="${TYPING_LINES}\"${HINDSIGHT}\""
+          done
+
           ENCODED_LINES=$(printf '%s' "$TYPING_LINES" | jq -sRr @uri | sed 's/%0A//g')
 
           DAY=$(date +%-d)
@@ -41,7 +49,7 @@ jobs:
           cat > README.md << EOF
           ## GREAT THINGS AI SAYS IN HINDSIGHT
           #### ${DATE_STRING}
-          ![Typing SVG](https://readme-typing-svg.demolab.com?font=Kalam&pause=1000&color=0E8A16&vCenter=true&width=800&style=italic&lines=${ENCODED_LINES})
+          ![Typing SVG](https://readme-typing-svg.demolab.com?font=Kalam&size=20&duration=6000&pause=1800&color=0E8A16&vCenter=true&random=true&width=850&lines=${ENCODED_LINES})
           EOF
 
       - name: Commit and push if changed
