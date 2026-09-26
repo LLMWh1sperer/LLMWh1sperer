@@ -1,4 +1,4 @@
-name: Update AI Hindsight of the Day
+name: Update AI Hindsight
 
 on:
   schedule:
@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Update README with AI hindsight of the day
+      - name: Update AI Hindsight
         run: |
           DAY_OF_YEAR=$(date +%-j)
           TOTAL_HINDSIGHTS=$(wc -l < hindsight.txt)
@@ -36,7 +36,7 @@ jobs:
           ENCODED_LINES=$(printf '%s' "$TYPING_LINES" | jq -sRr @uri | sed 's/%0A//g')
 
           cat > README.md << EOF
-          #### AI says the darndest things
+          #### AI Hindsight
           ![Typing SVG](https://readme-typing-svg.demolab.com?font=Cormorant+Garamond&size=20&duration=6000&pause=1800&color=0E8A16&vCenter=true&random=true&width=850&lines=${ENCODED_LINES})
           EOF
 
@@ -45,4 +45,4 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add README.md
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update AI hindsight for $(date '+%B %d, %Y')" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update AI Hindsight for $(date '+%B %d, %Y')" && git push)
