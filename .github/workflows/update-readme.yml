@@ -35,20 +35,8 @@ jobs:
 
           ENCODED_LINES=$(printf '%s' "$TYPING_LINES" | jq -sRr @uri | sed 's/%0A//g')
 
-          DAY=$(date +%-d)
-          MONTH=$(date +%B)
-          YEAR=$(date +%Y)
-          case $DAY in
-            1|21|31) SUFFIX="st";;
-            2|22) SUFFIX="nd";;
-            3|23) SUFFIX="rd";;
-            *) SUFFIX="th";;
-          esac
-          DATE_STRING="${MONTH} ${DAY}${SUFFIX}, ${YEAR}"
-
           cat > README.md << EOF
           ## GREAT THINGS AI SAYS IN HINDSIGHT
-          #### ${DATE_STRING}
           ![Typing SVG](https://readme-typing-svg.demolab.com?font=Kalam&size=20&duration=6000&pause=1800&color=0E8A16&vCenter=true&random=true&width=850&lines=${ENCODED_LINES})
           EOF
 
