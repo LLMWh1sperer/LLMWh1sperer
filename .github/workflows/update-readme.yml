@@ -20,7 +20,7 @@ jobs:
         run: |
           DAY_OF_YEAR=$(date +%-j)
           TOTAL_HINDSIGHTS=$(wc -l < hindsight.txt)
-          QUOTES_PER_CYCLE=6
+          QUOTES_PER_CYCLE=20
           START_INDEX=$(( ((DAY_OF_YEAR - 1) * QUOTES_PER_CYCLE) % TOTAL_HINDSIGHTS + 1 ))
           TYPING_LINES=""
 
