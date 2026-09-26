@@ -37,7 +37,7 @@ jobs:
 
           cat > README.md << EOF
           ## AI Says the Darndest Things
-          ![Typing SVG](https://readme-typing-svg.demolab.com?font=Kalam&size=20&duration=6000&pause=1800&color=0E8A16&vCenter=true&random=true&width=850&lines=${ENCODED_LINES})
+          ![Typing SVG](https://readme-typing-svg.demolab.com?font=Comic+Neue&size=20&duration=6000&pause=1800&color=0E8A16&vCenter=true&random=true&width=850&lines=${ENCODED_LINES})
           EOF
 
       - name: Commit and push if changed
