@@ -1,0 +1,52 @@
+name: Update AI Hindsight of the Day
+
+on:
+  schedule:
+    # Runs at 00:00 UTC daily
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update README with AI hindsight of the day
+        run: |
+          DAY_OF_YEAR=$(date +%-j)
+          TOTAL_HINDSIGHTS=$(wc -l < hindsight.txt)
+          HINDSIGHT_INDEX=$(( (DAY_OF_YEAR - 1) % TOTAL_HINDSIGHTS + 1 ))
+          HINDSIGHT=$(sed -n "${HINDSIGHT_INDEX}p" hindsight.txt)
+
+          WRAPPED=$(echo "$HINDSIGHT" | fold -s -w 80 | sed 's/$/;/' | tr '\n' ' ' | sed 's/; $//')
+          TYPING_LINES="\"${WRAPPED}\""
+          ENCODED_LINES=$(printf '%s' "$TYPING_LINES" | jq -sRr @uri | sed 's/%0A//g')
+
+          DAY=$(date +%-d)
+          MONTH=$(date +%B)
+          YEAR=$(date +%Y)
+          case $DAY in
+            1|21|31) SUFFIX="st";;
+            2|22) SUFFIX="nd";;
+            3|23) SUFFIX="rd";;
+            *) SUFFIX="th";;
+          esac
+          DATE_STRING="${MONTH} ${DAY}${SUFFIX}, ${YEAR}"
+
+          cat > README.md << EOF
+          ## GREAT THINGS AI SAYS IN HINDSIGHT
+          #### ${DATE_STRING}
+          ![Typing SVG](https://readme-typing-svg.demolab.com?font=Kalam&pause=1000&color=0E8A16&vCenter=true&width=800&style=italic&lines=${ENCODED_LINES})
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update AI hindsight for $(date '+%B %d, %Y')" && git push)

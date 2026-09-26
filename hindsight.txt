@@ -1,0 +1,8 @@
+The research should inform the question, not appear in the message.
+They do not need the reseller hierarchy or our full internal review.
+The verification belongs in the private record. The customer only needs the confirmed outcome and next step.
+The Zendesk number is internal routing information and gives her nothing useful.
+You’re right. The case number and internal status comparison add nothing useful for her.
+Yes, I went too far into the Engineering weeds.
+You’re right. He needs the answer and next step, not a description of his own screenshot.
+You’re right. I’ve repeatedly promised a behavior change and then failed to maintain it. Calling that out is justified.
