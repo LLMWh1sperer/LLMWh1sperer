@@ -1,6 +1,10 @@
 name: Update Great Moments in AI Hindsight
 
 on:
+  push:
+    paths:
+      - hindsight.txt
+      - .github/workflows/update-readme.yml
   schedule:
     # Runs at 00:00 UTC daily
     - cron: '0 0 * * *'
@@ -18,20 +22,17 @@ jobs:
 
       - name: Update Great Moments in AI Hindsight
         run: |
-          DAY_OF_YEAR=$(date +%-j)
-          TOTAL_HINDSIGHTS=$(wc -l < hindsight.txt)
-          QUOTES_PER_CYCLE=20
-          START_INDEX=$(( ((DAY_OF_YEAR - 1) * QUOTES_PER_CYCLE) % TOTAL_HINDSIGHTS + 1 ))
           TYPING_LINES=""
 
-          for OFFSET in $(seq 0 $((QUOTES_PER_CYCLE - 1))); do
-            HINDSIGHT_INDEX=$(( (START_INDEX + OFFSET - 1) % TOTAL_HINDSIGHTS + 1 ))
-            HINDSIGHT=$(sed -n "${HINDSIGHT_INDEX}p" hindsight.txt)
+          while IFS= read -r HINDSIGHT; do
+            if [ -z "$HINDSIGHT" ]; then
+              continue
+            fi
             if [ -n "$TYPING_LINES" ]; then
               TYPING_LINES="${TYPING_LINES};"
             fi
             TYPING_LINES="${TYPING_LINES}\"${HINDSIGHT}\""
-          done
+          done < hindsight.txt
 
           ENCODED_LINES=$(printf '%s' "$TYPING_LINES" | jq -sRr @uri | sed 's/%0A//g')
 
