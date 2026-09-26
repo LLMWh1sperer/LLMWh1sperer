@@ -1,6 +1,2 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Cormorant+Garamond&amp;size=38&amp;duration=1&amp;pause=1&amp;color=F0F6FC&amp;vCenter=true&amp;repeat=false&amp;width=850&amp;height=55&amp;lines=AI+Says+the+Darndest+Things">
-  <img alt="AI Says the Darndest Things" src="https://readme-typing-svg.demolab.com?font=Cormorant+Garamond&amp;size=38&amp;duration=1&amp;pause=1&amp;color=1F2328&amp;vCenter=true&amp;repeat=false&amp;width=850&amp;height=55&amp;lines=AI+Says+the+Darndest+Things">
-</picture>
-
+#### AI says the darndest things
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Cormorant+Garamond&size=20&duration=6000&pause=1800&color=0E8A16&vCenter=true&random=true&width=850&lines=%22You%E2%80%99re%20right.%20I%20misread%20the%20screenshot%20timestamp%20and%20turned%20it%20into%20a%20sequence%20it%20did%20not%20prove.%22%3B%22Nowhere%20yet.%20I%20shouldn%E2%80%99t%20have%20presented%20that%20message%20as%20send-ready.%22%3B%22You%E2%80%99re%20right.%20I%20treated%20the%20original%20attachment%20as%20if%20it%20were%20independent%20evidence.%22%3B%22You%E2%80%99re%20right.%20I%20overstated%20what%20the%20attachment%20proved.%22%3B%22The%20research%20should%20inform%20the%20question%2C%20not%20appear%20in%20the%20message.%22%3B%22They%20do%20not%20need%20the%20reseller%20hierarchy%20or%20our%20full%20internal%20review.%22)
