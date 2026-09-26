@@ -36,7 +36,7 @@ jobs:
           ENCODED_LINES=$(printf '%s' "$TYPING_LINES" | jq -sRr @uri | sed 's/%0A//g')
 
           cat > README.md << EOF
-          ## GREAT THINGS AI SAYS IN HINDSIGHT
+          ## AI Says the Darndest Things
           ![Typing SVG](https://readme-typing-svg.demolab.com?font=Kalam&size=20&duration=6000&pause=1800&color=0E8A16&vCenter=true&random=true&width=850&lines=${ENCODED_LINES})
           EOF
 
