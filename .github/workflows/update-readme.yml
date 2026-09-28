@@ -35,7 +35,7 @@ jobs:
 
           cat > README.md << EOF
           #### Great Moments in AI Hindsight
-          ![Animated quotes from Great Moments in AI Hindsight](https://readme-typing-svg.demolab.com?font=Cormorant+Garamond&size=20&duration=6000&pause=1800&color=0E8A16&vCenter=true&random=true&width=850&lines=${ENCODED_LINES})
+          ![Animated quotes from Great Moments in AI Hindsight](https://readme-typing-svg.demolab.com?font=Cormorant+Garamond&size=16&duration=6000&pause=1800&color=0E8A16&vCenter=true&random=true&width=1200&lines=${ENCODED_LINES})
           EOF
 
       - name: Commit and push if changed
