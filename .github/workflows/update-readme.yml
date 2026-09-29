@@ -29,7 +29,7 @@ jobs:
 
           width = 1200
           padding = 60
-          font_size = 25
+          font_size = 24
           line_gap = 10
           source = Path("hindsight.txt")
           output = Path(".github/assets/hindsight.gif")
@@ -38,8 +38,9 @@ jobs:
               raise SystemExit("hindsight.txt contains no sentences")
 
           font_paths = (
-              "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf",
-              "/System/Library/Fonts/Supplemental/Georgia.ttf",
+              "/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf",
+              "/System/Library/Fonts/Supplemental/Arial.ttf",
+              "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
           )
           for font_path in font_paths:
               if Path(font_path).exists():
@@ -96,7 +97,7 @@ jobs:
               output,
               save_all=True,
               append_images=frames[1:],
-              duration=6000,
+              duration=15000,
               loop=0,
               disposal=2,
               transparency=255,
