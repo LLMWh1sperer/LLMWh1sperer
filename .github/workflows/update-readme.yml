@@ -1,4 +1,4 @@
-name: Update Great Moments in AI Hindsight
+name: Update AI Hindsight Highlights
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Update Great Moments in AI Hindsight
+      - name: Update AI Hindsight Highlights
         run: |
           TYPING_LINES=""
 
@@ -34,8 +34,8 @@ jobs:
           ENCODED_LINES=$(printf '%s' "$TYPING_LINES" | jq -sRr @uri)
 
           cat > README.md << EOF
-          #### Great Moments in AI Hindsight
-          ![Animated quotes from Great Moments in AI Hindsight](https://readme-typing-svg.demolab.com?font=Cormorant+Garamond&size=16&duration=6000&pause=1800&color=0E8A16&vCenter=true&random=true&width=1200&lines=${ENCODED_LINES})
+          #### AI Hindsight Highlights
+          ![Animated quotes from AI Hindsight Highlights](https://readme-typing-svg.demolab.com?font=Cormorant+Garamond&size=16&duration=6000&pause=1800&color=0E8A16&vCenter=true&random=true&width=1200&lines=${ENCODED_LINES})
           EOF
 
       - name: Commit and push if changed
@@ -44,6 +44,6 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add README.md
           if ! git diff --staged --quiet; then
-            git commit -m "Update Great Moments in AI Hindsight"
+            git commit -m "Update AI Hindsight Highlights"
             git push
           fi
