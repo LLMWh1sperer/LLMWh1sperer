@@ -9,6 +9,7 @@ You’re right. He needs the answer and next step, not a description of his own 
 The Zendesk number is internal routing information and gives her nothing useful.
 The research should inform the question, not appear in the message.
 The verification belongs in the private record. The customer only needs the confirmed outcome and next step.
+Exactly. The customer only needs the requirement, not our internal verification process.
 Agreed. The customer does not need our internal uncertainty or investigation history.
 They do not need the reseller hierarchy or our full internal review.
 You’re right. Those bullets describe the obstruction but leave him with no decision or next action.
