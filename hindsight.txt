@@ -8,6 +8,7 @@ You’re right. He already knows what he reported.
 Right. That repeats an unchanged outcome she already knows. It adds nothing.
 You’re right. He needs the answer and next step, not a description of his own screenshot.
 We shouldn’t. It merely repeats what he just told us and what his screenshot shows. It adds no useful decision or action.
+Right. The empathy should come through in the care and caution of the response, not by explicitly describing what he has been through.
 The Zendesk number is internal routing information and gives her nothing useful.
 The research should inform the question, not appear in the message.
 The verification belongs in the private record. The customer only needs the confirmed outcome and next step.
