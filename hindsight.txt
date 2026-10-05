@@ -17,6 +17,7 @@ The verification belongs in the private record. The customer only needs the conf
 Exactly. The customer only needs the requirement, not our internal verification process.
 Agreed. The customer does not need our internal uncertainty or investigation history.
 They do not need the reseller hierarchy or our full internal review.
+Agreed. The detailed-review language sounds self-congratulatory given the history.
 You’re right. Those bullets describe the obstruction but leave him with no decision or next action.
 You’re right. The timing adds no value and invites an avoidable question about why it did not happen sooner.
 Agreed. Claiming we’ll monitor it implies visibility we don’t actually have.
