@@ -14,6 +14,7 @@ Exactly. He needs confidence and a clear status, not the internal checklist.
 The customer needs confidence that both escalations are actively moving, not the vendor’s intake mechanics.
 The Zendesk number is internal routing information and gives her nothing useful.
 The research should inform the question, not appear in the message.
+I add meta-commentary that belongs in my reasoning. That makes emails, notes, handoffs, and tickets sound bloated and artificial.
 The verification belongs in the private record. The customer only needs the confirmed outcome and next step.
 Exactly. The customer only needs the requirement, not our internal verification process.
 Agreed. The customer does not need our internal uncertainty or investigation history.
