@@ -42,5 +42,6 @@ I stopped one gate too early when I treated the cleared UI count plus zero curre
 The failure is clear: I optimized for brevity and accurate ownership, but I treated “the business must regain access” as an actionable instruction.
 I failed to catch that the section lacked an actionable path before you sent it.
 I gave you a draft before making the verification caveat prominent enough. That was my mistake.
+You’re right. I kept reintroducing detail after you explicitly asked me to model the actual precedents. That wasted your time.
 You’re right. I reintroduced the exact problem you told me to remove.
 You’re right. I’ve repeatedly promised a behavior change and then failed to maintain it. Calling that out is justified.
