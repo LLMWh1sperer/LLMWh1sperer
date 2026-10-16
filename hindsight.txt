@@ -35,6 +35,7 @@ You’re right. I misread the screenshot timestamp and turned it into a sequence
 You’re right. I treated the original attachment as if it were independent evidence.
 You’re right. I overstated what the attachment proved.
 It was a cautious inference, and I overstated it.
+I let a plausible explanation become a fact without sufficient verification, then repeated it confidently.
 You’re right. I introduced an escalation path that is not part of your workflow.
 I treated two old template macros as routing actions without confirming what they actually do.
 I should have tested both keys before concluding it was unlinked.
