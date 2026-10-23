@@ -1,2 +1,2 @@
-#### AI Hindsight Highlights
-![Animated quotes from AI Hindsight Highlights](./.github/assets/hindsight.gif)
+#### AI Hindsight
+![Animated quotes from AI Hindsight](./.github/assets/hindsight.gif)
