@@ -24,6 +24,7 @@ jobs:
       - name: Generate animated highlights
         run: |
           python3 - <<'PY'
+          import random
           from pathlib import Path
           from PIL import Image, ImageDraw, ImageFont
 
@@ -36,6 +37,7 @@ jobs:
           quotes = [line.strip() for line in source.read_text(encoding="utf-8").splitlines() if line.strip()]
           if not quotes:
               raise SystemExit("hindsight.txt contains no sentences")
+          random.shuffle(quotes)
 
           font_paths = (
               "/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf",
